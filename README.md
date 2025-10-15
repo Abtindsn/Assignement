@@ -1,8 +1,9 @@
-# Dijkstra Semicircular Path Tools
+# Semicircular Path Tools
 
-This repository contains two complementary implementations of Dijkstra's algorithm on a semi-circular annulus grid:
+This repository contains two complementary shortest-path solvers plus a visualization for the semicircular annulus track used in the assignment:
 
-- `dijkstar.py` — a standalone Python script that computes the shortest path length numerically.
+- `dijkstar.py` — Dijkstra's algorithm implemented in Python for baseline comparisons.
+- `Astar.py` — A* search with an admissible Euclidean heuristic to reach the goal faster.
 - `visualization.tsx` — a React component that renders and animates the grid, allowing you to explore the path interactively in the browser.
 
 ## Requirements
@@ -10,13 +11,21 @@ This repository contains two complementary implementations of Dijkstra's algorit
 - Python 3.8+ for running the script.
 - A React + TypeScript project (React 18 tested) with `lucide-react` installed for the visualization.
 
-## Running the Python Solver
+## Running the Python Solvers
+
+Run the Dijkstra baseline:
 
 ```bash
 python3 dijkstar.py
 ```
 
-The script prints the length of the shortest path (in meters) between the designated start and end nodes on the track. No additional dependencies are required beyond the Python standard library (`math` and `heapq`).
+Run the A* variant:
+
+```bash
+python3 Astar.py
+```
+
+Each script prints the length of the shortest path (in meters) between the designated start and end nodes on the track. No additional dependencies are required beyond the Python standard library (`math` and `heapq`).
 
 ## Using the React Visualization
 
@@ -42,6 +51,7 @@ The component provides sliders to adjust the grid density, buttons to compute th
 
 ## Notes
 
-- Both implementations assume a half-ring (180°) track with adjustable inner and outer radii.
+- Both search implementations assume a half-ring (180°) track with adjustable inner and outer radii.
+- A* and Dijkstra use identical edge weights; only the priority-queue ordering changes via the heuristic.
 - The React component recalculates the path on demand, so no backend communication is required.
 - The Python output is a quick way to verify numerical results when integrating or testing the frontend.
