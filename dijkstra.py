@@ -1,4 +1,4 @@
-# assignment1_shortest_path_explained.py -- dijkstar algorithm
+# assignment1_shortest_path_explained.py -- Dijkstra algorithm
 
 import math
 import heapq
