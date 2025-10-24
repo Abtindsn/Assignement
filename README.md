@@ -2,7 +2,7 @@
 
 This repository contains two complementary shortest-path solvers plus a visualization for the semicircular annulus track used in the assignment:
 
-- `dijkstar.py` — Dijkstra's algorithm implemented in Python for baseline comparisons.
+- `dijkstra.py` — Dijkstra's algorithm implemented in Python for baseline comparisons.
 - `Astar.py` — A* search with an admissible Euclidean heuristic to reach the goal faster.
 - `visualization.tsx` — a React component that renders and animates the grid, allowing you to explore the path interactively in the browser.
 
@@ -16,7 +16,7 @@ This repository contains two complementary shortest-path solvers plus a visualiz
 Run the Dijkstra baseline:
 
 ```bash
-python3 dijkstar.py
+python3 dijkstra.py
 ```
 
 Run the A* variant:
